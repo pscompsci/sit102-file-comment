@@ -41,7 +41,7 @@ var exerciseName: string;
 /**
  * Called when the extension is first activated.
  * 
- * @param context the context for the extention
+ * @param context the context for the extension
  */
 function activate(context: vscode.ExtensionContext) {
 

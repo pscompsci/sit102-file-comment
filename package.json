@@ -24,6 +24,23 @@
     ],
     "main": "./out/extension.js",
     "contributes": {
+        "keybindings": [
+            {
+                "command": "extension.SIT102.insertFileComment",
+                "key": "alt+shift+f",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.SIT102.insertFunctionComment",
+                "key": "alt+shift+p",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "extension.SIT102.insertStructComment",
+                "key": "alt+shift+s",
+                "when": "editorTextFocus"
+            }
+        ],
         "commands": [
             {
                 "command": "extension.SIT102.insertFileComment",
