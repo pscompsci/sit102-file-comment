@@ -12,7 +12,7 @@ To do this, in VS Code:
 
 * Select `File->Preferences->Settings`
 * Look in the Extensions section for `SIT102`
-* Update the `name` and `ID` fields
+* Update the `Name` and `ID` fields
 
 Default settings are provided, however a the values can be changes to tailor the output.
 
