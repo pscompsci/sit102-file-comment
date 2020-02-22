@@ -39,7 +39,7 @@ At the top of a .py file, the following docstring will be inserted:
 ```python
 """SIT102 - Introduction to Programming  
 
- Exercise:       [8_1_Readning_Another_Language  
+ Exercise:       8_1_Reading_Another_Language  
  Student Name:   Jane Doe  
  Student ID:     22000001  
 """
@@ -49,7 +49,7 @@ For further information on the format, refer to [PEP-8](https://www.python.org/d
 
 ## Example Procedure and Function Comments
 
-For procedures and functions, the output will be adjusted based on the signature when delcaring the procedure or function.
+For procedures and functions, the output will be adjusted based on the signature when declaring the procedure or function.
 
 Some C/C++ examples include (Python will be similar, but for python multiline docstrings):
 
@@ -99,12 +99,12 @@ For an enum or a struct, the following comment provides an example of the format
 
 ```cpp
 /**  
- * Defines the attiributes of an Astronaut  
+ * Defines the attributes of an Astronaut  
  */
 ```
 
 ### Note
 
-Since version 3.4, an emum type has been available for Python. As a result, the above format for enums and structs can be used with Python, however you are unlikely to need it during this subject.
+Since version 3.4, an enum type has been available for Python. As a result, the above format for enums and structs can be used with Python, however you are unlikely to need it during this subject.
 
 <sub>In Loving Memory of Grace Stacey</sub><br/><sup>18/06/2003 - 01/01/2020</sup>
