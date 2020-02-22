@@ -1,65 +1,110 @@
-# sit102-file-comment README
+# SIT102 - File Comment Insert
 
-This is the README for your extension "sit102-file-comment". After writing up a brief description, we recommend including the following sections.
+This extension inserts SIT102 assignment specific comments and docstrings into C/C++ and Python files.
 
-## Features
+The extension assumes that the Splashkit project is created in a folder named after the exercise being completed. If not, any of the fields can be updated after the comment is added to the file.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Configuration
 
-For example if there is an image subfolder under your extension project workspace:
+Add your name and student ID to the SIT102 settings.
 
-\!\[feature X\]\(images/feature-x.png\)
+To do this, in VS Code:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* Select `File->Preferences->Settings`
+* Look in the Extensions section for `SIT102`
+* Update the `name` and `ID` fields
 
-## Requirements
+Default settings are provided, however a the values can be changes to tailor the output.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Example File Level Comments
 
-## Extension Settings
+### C/C++
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+At the top of a .h, .hpp or .cpp file, the following comment will be inserted:
 
-For example:
+```cpp
+/**  
+ * SIT102 - Introduction to Programming  
+ *  
+ * Exercise:       7_1_Arrays_and_Structs  
+ * Student Name:   John Doe  
+ * Student ID:     22000000  
+ */
+```
 
-This extension contributes the following settings:
+### Python
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+At the top of a .py file, the following docstring will be inserted:
 
-## Known Issues
+```python
+"""SIT102 - Introduction to Programming  
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+ Exercise:       [8_1_Readning_Another_Language  
+ Student Name:   Jane Doe  
+ Student ID:     22000001  
+"""
+```
 
-## Release Notes
+For further information on the format, refer to [PEP-8](https://www.python.org/dev/peps/pep-0008/) and [PEP-257](https://www.python.org/dev/peps/pep-0257/).
 
-Users appreciate release notes as you update your extension.
+## Example Procedure and Function Comments
 
-### 1.0.0
+For procedures and functions, the output will be adjusted based on the signature when delcaring the procedure or function.
 
-Initial release of ...
+Some C/C++ examples include (Python will be similar, but for python multiline docstrings):
 
-### 1.0.1
+### Procedure with no Parameters
 
-Fixed issue #.
+```cpp
+/**  
+ * Outputs `Hello World` to the standard output
+ */
+```
 
-### 1.1.0
+### Procedure with Parameters
 
-Added features X, Y, and Z.
+```cpp
+/**  
+ * Outputs a string to the standard output
+ *
+ * @param message the message to write out
+ */
+```
 
------------------------------------------------------------------------------------------------------------
+### Function with no Parameters
 
-## Working with Markdown
+```cpp
+/**  
+ * Returns latest weather data from the BOM API
+ *
+ * @returns weather data as a JSON object
+ */
+```
 
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+### Function with Parameters
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+```cpp
+/**  
+ * Returns the multiplication of two doubles
+ *
+ * @param x     x value to multiple
+ * @param y     y value to multiple
+ * @returns the multiplication of x and y
+ */
+```
 
-### For more information
+## Example Enum and Struct Comments
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+For an enum or a struct, the following comment provides an example of the format for a C/C++ file:
 
-**Enjoy!**
+```cpp
+/**  
+ * Defines the attiributes of an Astronaut  
+ */
+```
+
+### Note
+
+Since version 3.4, an emum type has been available for Python. As a result, the above format for enums and structs can be used with Python, however you are unlikely to need it during this subject.
+
+<sub>In Loving Memory of Grace Stacey</sub><br/><sup>18/06/2003 - 01/01/2020</sup>
