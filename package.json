@@ -2,7 +2,7 @@
     "name": "sit102-file-comment",
     "displayName": "sit102-file-comment",
     "description": "The easiest way to insert file comments and docstrings into C/C++ and Python files for SIT102",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "pstacey",
     "license": "MIT",
     "engines": {
