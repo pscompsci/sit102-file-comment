@@ -1,127 +1,39 @@
-module.exports = (languageName: string) => {
+/*
+ * Copyright 2020 Peter Stacey
+ *
+ * Permission is hereby granted, free of charge, to any person 
+ * obtaining a copy of this software and associated documentation 
+ * files (the "Software"), to deal in the Software without 
+ * restriction, including without limitation the rights to use, copy, 
+ * modify, merge, publish, distribute, sublicense, and/or sell copies 
+ * of the Software, and to permit persons to whom the Software is 
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be 
+ * included in all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS 
+ * BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN 
+ * ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+ * SOFTWARE.
+ */
+
+export function languageTable(languageName: string) {
     switch (languageName) {
-        case 'arendelle':
-        case 'csharp':
-        case 'glsl':
-        case 'groovy':
-        case 'haxe':
-        case 'java':
-        case 'javascript':
-        case 'javascriptreact':
-        case 'jison':
-        case 'json':
-        case 'karyscript':
-        case 'less':
-        case 'objective-c':
-        case 'ohm':
-        case 'pegjs':
-        case 'php':
-        case 'processing':
-        case 'qml':
-        case 'rust':
-        case 'scala':
-        case 'swift':
-        case 'typescript':
-        case 'typescriptreact':
-        case 'uno':
-            return {
-                sensitive: false,
-                chars: { start: "//", middle: "//", end: "//" }
-            };
-        case 'fsharp':
-        case 'go':
-        case 'pageman':
-        case 'stylus':
-        case 'yuml':
-            return {
-                sensitive: true,
-                chars: { start: "//", middle: "//", end: "//" }
-            };
-        case 'bash':
-        case 'fish':
-        case 'make':
-        case 'makefile':
-        case 'nearley':
-        case 'perl':
-        case 'powershell':
-        case 'r':
-        case 'ruby':
-        case 'shell':
-        case 'shellscript':
-            return {
-                sensitive: false,
-                chars: { start: "#", middle: "#", end: "#" }
-            };
-        case 'coffeescript':
-        case 'julia':
         case 'python':
-        case 'nix':
-        case 'yml':
-        case 'yaml':
             return {
-                sensitive: true,
-                chars: { start: "#", middle: "#", end: "#" }
-            };
-        case 'latex':
-        case 'matlab':
-        case 'octave':
-        case 'tex':
-            return {
-                sensitive: false,
-                chars: { start: "%", middle: "%", end: "%" }
-            };
-        case 'elm':
-        case 'haskell':
-        case 'purescript':
-            return {
-                sensitive: true,
-                chars: { start: "--", middle: "--", end: "--" }
-            };
-        case 'lua':
-        case 'sql':
-            return {
-                sensitive: false,
-                chars: { start: "--", middle: "--", end: "--" }
-            };
-        case 'clojure':
-        case 'lisp':
-        case 'racket':
-        case 'scheme':
-            return {
-                sensitive: false,
-                chars: { start: ";;", middle: ";;", end: ";;" }
-            };
-        case 'bat':
-            return {
-                sensitive: false,
-                chars: { start: "::", middle: "::", end: "::" }
-            };
-        case 'vb':
-            return {
-                sensitive: false,
-                chars: { start: "'", middle: "'", end: "'" }
+                first_line_end: '',
+                chars: { start: "\"\"\"", middle: "", end: "\"\"\"" }
             };
         case "c":
         case "cpp":
-        case "css":
             return {
-                sensitive: false,
+                first_line_end: '\n',
                 chars: { start: "/**", middle: " *", end: " */" }
-            };
-        case "html":
-        case "xml":
-        case "xhtml":
-        case "us":
-        case "xaml":
-        case "plist":
-            return {
-                sensitive: false,
-                chars: { start: "<!--", middle: "  --", end: "  -->" }
-            };
-        case 'plaintext':
-            return {
-                sensitive: false,
-                chars: { start: "--", middle: "--", end: "--" }
             };
         default:
             return null;

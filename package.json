@@ -4,6 +4,7 @@
     "description": "The easiest way to insert file comments and docstrings into C/C++ and Python files for SIT102",
     "version": "0.0.1",
     "publisher": "Peter Stacey",
+    "license": "MIT",
     "engines": {
         "vscode": "^1.40.0"
     },
@@ -19,29 +20,47 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sit102b"
+        "*"
     ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sit102b",
-                "title": "SIT102 Exercise File Comment"
+                "command": "extension.SIT102.insertFileComment",
+                "title": "SIT102 Insert File Comment"
+            },
+            {
+                "command": "extension.SIT102.insertFunctionComment",
+                "title": "SIT102 Insert Procedure or Function Comment"
+            },
+            {
+                "command": "extension.SIT102.insertStructComment",
+                "title": "SIT102 Insert Enum or Struct Comment"
             }
         ],
         "configuration": {
             "type": "object",
             "title": "SIT102",
             "properties": {
-                "student.name": {
-                    "type": "string",
-                    "default": "Student name (edit in settings)",
-                    "description": "Student name"
-                },
                 "student.id": {
                     "type": "string",
-                    "default": "Student ID (edit in settings)",
+                    "default": "Your student ID (File->Preferences->Settings SIT102)",
                     "description": "Student ID number"
+                },
+                "student.name": {
+                    "type": "string",
+                    "default": "Your name (File->Preferences->Settings SIT102)",
+                    "description": "Student name"
+                },
+                "subject.code": {
+                    "type": "string",
+                    "default": "SIT102",
+                    "description": "Subject code"
+                },
+                "subject.name": {
+                    "type": "string",
+                    "default": "Introduction to Programming",
+                    "description": "Subject name"
                 }
             }
         }
