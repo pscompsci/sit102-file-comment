@@ -2,7 +2,7 @@
 
 This extension inserts SIT102 assignment specific comments and docstrings into C/C++ and Python files.
 
-The extension assumes that the Splashkit project is created in a folder named after the exercise being completed. If not, any of the fields can be updated after the comment is added to the file.
+The extension assumes that the Splashkit project is created in a folder named after the exercise being completed. If not, any of the fields can be updated after the comment is inserted into the file.
 
 ## Configuration
 
@@ -14,7 +14,7 @@ To do this, in VS Code:
 * Look in the Extensions section for `SIT102`
 * Update the `Name` and `ID` fields
 
-Default settings are provided, however a the values can be changes to tailor the output.
+Default settings are provided, however a the values can be changed to tailor the output.
 
 ## Example File Level Comments
 
