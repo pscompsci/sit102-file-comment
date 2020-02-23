@@ -16,6 +16,34 @@ To do this, in VS Code:
 
 Default settings are provided, however a the values can be changed to tailor the output.
 
+## Use
+
+To access the commands:
+
+* With a program file open
+* Access the command palette with `View->Command Palette` or `Ctrl+Shift+P` or `F1`
+* Begin typing `SIT102`
+* Three commands are available:
+    1. SIT102 Insert File Comment
+    2. SIT102 Insert Procedure or Function Comment
+    3. SIT102 Insert Enum or Struct Comment
+
+Shortcut keys are also available
+
+1. Insert file comment:                   `Alt+Shift+F`
+2. Insert procedure or function comment:  `Alt+Shift+P`
+3. Insert enum or struct comment:         `Alt+Shift+S`
+
+For inserting a file comment, the comment will be automatically inserted at the top of the file.
+
+For inserting a procedure or function comment, place the cursor on the signature row of the procedure or function declaration (ie. the first row of the procedure or function).
+
+For inserting an enum or struct comment, place the cursor on the first row of the enum or struct declaration.
+
+For an example:
+
+![demo](./media/use_explanation.gif)
+
 ## Example File Level Comments
 
 ### C/C++
@@ -89,7 +117,7 @@ Some C/C++ examples include (Python will be similar, but for python multiline do
  *
  * @param x     x value to multiple
  * @param y     y value to multiple
- * @returns the multiplication of x and y
+ * @returns the product of x and y
  */
 ```
 
