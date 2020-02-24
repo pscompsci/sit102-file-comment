@@ -105,7 +105,7 @@ Some C/C++ examples include (Python will be similar, but for python multiline do
 /**  
  * Returns latest weather data from the BOM API
  *
- * @returns weather data as a JSON object
+ * @return weather data as a JSON object
  */
 ```
 
@@ -117,13 +117,13 @@ Some C/C++ examples include (Python will be similar, but for python multiline do
  *
  * @param x     x value to multiple
  * @param y     y value to multiple
- * @returns the product of x and y
+ * @return the product of x and y
  */
 ```
 
 ## Example Enum and Struct Comments
 
-For an enum or a struct, the following comment provides an example of the format for a C/C++ file:
+For an enum, struct or comment for a preprocessor define, the following comment provides an example of the format for a C/C++ file:
 
 ```cpp
 /**  

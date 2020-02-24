@@ -264,7 +264,7 @@ function functionCommentFormat(language: any, params: string[], procedure: boole
         comment += `${language.chars.middle} \n`;
     }
     if (!procedure) {
-        comment += `${language.chars.middle} @returns \n`;
+        comment += `${language.chars.middle} @return \n`;
     }
     comment += `${language.chars.end}\n`;
 
