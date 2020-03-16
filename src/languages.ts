@@ -31,6 +31,7 @@ export function languageTable(languageName: string) {
             };
         case "c":
         case "cpp":
+        case "cs":
             return {
                 first_line_end: '\n',
                 chars: { start: "/**", middle: " *", end: " */" }

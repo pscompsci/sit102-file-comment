@@ -14,7 +14,7 @@ To do this, in VS Code:
 * Look in the Extensions section for `SIT102`
 * Update the `Name` and `ID` fields
 
-Default settings are provided, however a the values can be changed to tailor the output.
+Default settings are provided, however the values can be changed to tailor the output.
 
 ## Use
 
